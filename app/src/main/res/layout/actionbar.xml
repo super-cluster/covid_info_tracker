@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/logo"
+    android:id="@+id/action_bar_logo"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/title"
+        android:layout_toEndOf="@+id/action_bar_logo"
+        android:layout_toRightOf="@+id/action_bar_logo"
         android:gravity="center"
-        android:text="Go Corona Go"
+        android:text="GoCoronaGo"
         android:textColor="#ffffff"
         app:fontFamily="@font/montserrat_alternates" />
-</LinearLayout>
+</RelativeLayout>

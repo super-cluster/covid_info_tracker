@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/db"
+            android:icon="@drawable/ic_live"
+            android:title="Live Count"
+            />
+        <item
+            android:id="@+id/db1"
+            android:icon="@drawable/ic_dos"
+            android:title="Do's" />
+        <item
+            android:id="@+id/db2"
+            android:icon="@drawable/dont"
+            android:title="Donts" />
+        <item android:id="@+id/mapViw"
+            android:icon="@drawable/ic_map"
+            android:title="Covid-19 Map"></item>
+        <item android:id="@+id/db3"
+            android:icon="@drawable/ic_contact"
+            android:title="Contact &amp; Helpline"></item>
+
+        <item
+            android:id="@+id/comuu"
+            android:title="Communication">
+            <menu>
+                <item
+                    android:id="@+id/db4"
+                    android:icon="@drawable/ic_share"
+                    android:title="Share" />
+                <item
+                    android:id="@+id/db5"
+                    android:icon="@drawable/ic_exit"
+                    android:title="Exit" />
+            </menu>
+        </item>
+    </group>
 </menu>

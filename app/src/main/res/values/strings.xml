@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GoCoronaGo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_india_view">Map</string>
+    <string name="fcm_token">FCM Token: %s</string>
 </resources>

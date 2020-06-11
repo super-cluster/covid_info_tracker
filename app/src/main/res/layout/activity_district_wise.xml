@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    android:orientation="vertical"
+    tools:context=".DistrictWise">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="District-wise"
+        android:textSize="28sp"
+        android:padding="5dp"
+        android:textColor="#052758"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_alternates"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Tap on state to see district Data"
+        android:layout_marginRight="2dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:gravity="right"/>
+   <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    app:cardCornerRadius="10dp"
+    android:padding="15dp"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerview1"/>
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>

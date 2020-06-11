@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "478044922634",
+    "firebase_url": "https://gocoronago-d919a.firebaseio.com",
+    "project_id": "gocoronago-d919a",
+    "storage_bucket": "gocoronago-d919a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478044922634:android:64f75f7f3d4d91aaee10f3",
+        "android_client_info": {
+          "package_name": "com.anurag.gocoronago"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478044922634-ane5vl9v2e0oq93lsdiri46uli480pp0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anurag.gocoronago",
+            "certificate_hash": "334d635c783ff21fa975f95cd2699902ac82dc38"
+          }
+        },
+        {
+          "client_id": "478044922634-837kr7pv48ru132g6pebluaeig6o0mmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtLncxc3UPLvYO2DbTYzjMw41Um9tDPqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478044922634-837kr7pv48ru132g6pebluaeig6o0mmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
