@@ -4,6 +4,6 @@ This is a Simple Android Application which shows the cases of growing coronaviru
 
 # ScreenShot
 <img src="screenshots/go.jpg" width="200">
-<img src="screenshots/screenshot1.jpg" width="100">   <img src="screenshots/screenshot2.jpg" width="100">
+
 
 
