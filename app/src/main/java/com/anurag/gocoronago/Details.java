@@ -89,9 +89,10 @@ public class Details extends AppCompatActivity {
             public void onResponse(JSONObject response) {
                 try {
 //                    Log.d("JsonArray", "onResponse: "+response.getJSONObject("data").getJSONArray("unofficial-summary").getJSONObject(0).getInt()
-                    int total=response.getJSONObject("data").getJSONArray("unofficial-summary").getJSONObject(0).getInt("total");
-                    int recoveres=response.getJSONObject("data").getJSONArray("unofficial-summary").getJSONObject(0).getInt("recovered");
-                    int deth=response.getJSONObject("data").getJSONArray("unofficial-summary").getJSONObject(0).getInt("deaths");
+                    int total=response.getJSONObject("data").getJSONObject("summary").getInt("total");
+                    int recoveres=response.getJSONObject("data").getJSONObject("summary").getInt("discharged");
+                    int deth=response.getJSONObject("data").getJSONObject("summary").getInt("deaths");
+
 
                     Log.d("confirmed", "onResponse: "+total);
 
