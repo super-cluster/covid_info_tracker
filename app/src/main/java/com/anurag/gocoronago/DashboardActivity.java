@@ -18,12 +18,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -58,10 +56,6 @@ public class DashboardActivity extends AppCompatActivity  {
                         String msg=getString(R.string.fcm_token,token);
                     }
                 });
-
-
-
-
 
 
 
@@ -307,28 +301,4 @@ public class DashboardActivity extends AppCompatActivity  {
         super.onStart();
     }
 
-    @Override
-    protected void onResume() {
-        if(haveNetwork()){
-
-        }else if(!haveNetwork()){
-//            Toast.makeText(this, "Network Connection is not available", Toast.LENGTH_SHORT).show();
-            AlertDialog.Builder builder = new AlertDialog.Builder(
-                    DashboardActivity.this);
-            builder.setTitle("No Internet Connection");
-            builder.setMessage("Check your Internet Connection and try again!!");
-            builder.setPositiveButton("OK",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog,
-                                            int which) {
-                            finish();
-                        }
-                    });
-            builder.show();
-
-
-
-        }
-        super.onResume();
-    }
 }

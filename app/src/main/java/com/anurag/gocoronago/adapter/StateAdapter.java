@@ -1,4 +1,4 @@
-package com.anurag.gocoronago;
+package com.anurag.gocoronago.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,15 +11,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.transition.TransitionManager;
 
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
+import com.anurag.gocoronago.R;
+import com.anurag.gocoronago.controller.AppController;
+import com.anurag.gocoronago.model.CountModel;
+import com.anurag.gocoronago.model.StateModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,7 +32,7 @@ import java.util.List;
 public class StateAdapter extends RecyclerView.Adapter<StateAdapter.MyHolder> {
     private Context context;
     private List<StateModel> stateModelList;
-    private CountMode countMode;
+    private CountModel countMode;
 
     public StateAdapter(Context context, List<StateModel> stateModelList) {
         this.context = context;
@@ -76,15 +77,11 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.MyHolder> {
 
 
 
-        final List<CountMode> countModeList=new ArrayList<>();
+        final List<CountModel> countModeList=new ArrayList<>();
 
 
 
 
-
-
-        RequestQueue requestQueue;
-        requestQueue= Volley.newRequestQueue(context);
         final JsonArrayRequest jsonArrayRequest=new JsonArrayRequest(Request.Method.GET, "https://api.covid19india.org/v2/state_district_wise.json", null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -104,7 +101,7 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.MyHolder> {
                                 String d = o.getString("deceased");
 
 
-                                countMode = new CountMode(ds, c, a, r, d);
+                                countMode = new CountModel(ds, c, a, r, d);
                                 countModeList.add(countMode);
                                 CountAdapter countAdapter = new CountAdapter(context, countModeList);
 
@@ -133,7 +130,7 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.MyHolder> {
 
             }
         });
-        requestQueue.add(jsonArrayRequest);
+        AppController.getInstance().getRequestQueue().add(jsonArrayRequest);
 
 
 

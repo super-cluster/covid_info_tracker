@@ -27,6 +27,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.anurag.gocoronago.controller.AppController;
 import com.github.ybq.android.spinkit.sprite.Sprite;
 import com.github.ybq.android.spinkit.style.Circle;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -47,12 +48,9 @@ import org.json.JSONObject;
  */
 public class LiveCount extends Fragment {
     private RequestQueue requestQueue;
-    private MapView mapView;
     private ProgressBar progressBar,progressBar1;
-    private RequestQueue requestQueue2;
     private TextView confirmed,rec,death,confirmed1,rec1,death1;
     private CardView cardView,cardView1;
-    private GoogleMap mMap;
     private static final String MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey";
 
 
@@ -75,8 +73,6 @@ public class LiveCount extends Fragment {
         View view =inflater.inflate(R.layout.fragment_live_count, container, false);
 
 
-        requestQueue= Volley.newRequestQueue(getContext());
-        requestQueue2= Volley.newRequestQueue(getContext());
         progressBar = view.findViewById(R.id.spin_kit);
         progressBar1 = view.findViewById(R.id.spin_kit1);
         confirmed= view.findViewById(R.id.Confimed);
@@ -157,10 +153,10 @@ public class LiveCount extends Fragment {
 
             }
         });
-        requestQueue2.add(jsonObjectRequest);
+        AppController.getInstance().getRequestQueue().add(jsonObjectRequest);
 
 
-        JsonObjectRequest jsonArrayRequest = new JsonObjectRequest(Request.Method.GET, "https://api.rootnet.in/covid19-in/stats/latest", null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest1 = new JsonObjectRequest(Request.Method.GET, "https://api.rootnet.in/covid19-in/stats/latest", null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
@@ -192,7 +188,7 @@ public class LiveCount extends Fragment {
                 Log.d("error", "onErrorResponse: " + error);
             }
         });
-        requestQueue.add(jsonArrayRequest);
+        AppController.getInstance().getRequestQueue().add(jsonObjectRequest1);
 
     }
 

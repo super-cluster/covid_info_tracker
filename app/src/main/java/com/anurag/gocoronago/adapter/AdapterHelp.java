@@ -1,4 +1,4 @@
-package com.anurag.gocoronago;
+package com.anurag.gocoronago.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.anurag.gocoronago.R;
+import com.anurag.gocoronago.model.ModelHelp;
 
 import java.util.List;
 

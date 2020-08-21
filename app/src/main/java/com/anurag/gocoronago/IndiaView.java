@@ -3,13 +3,9 @@ package com.anurag.gocoronago;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
-import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,19 +18,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.github.ybq.android.spinkit.sprite.Sprite;
-import com.github.ybq.android.spinkit.style.ThreeBounce;
+import com.anurag.gocoronago.model.ModelMap;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -156,10 +147,6 @@ public class IndiaView extends Fragment implements OnMapReadyCallback {
                         JSONObject jsonObject2=jsonObject.getJSONObject("latest");
 
 
-
-//                        GeocodingLocation locationAddress = new GeocodingLocation();
-//                        locationAddress.getAddressFromLocation(address,
-//                                getApplicationContext(), new GeocoderHandler());
 
 
                                     double lon =jsonObject1.getDouble("longitude");

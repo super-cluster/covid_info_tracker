@@ -1,9 +1,9 @@
-package com.anurag.gocoronago;
+package com.anurag.gocoronago.model;
 
-public class CountMode {
+public class CountModel {
     String district,confirmed,active,recovered,deceased;
 
-    public CountMode(String district, String confirmed, String active, String recovered, String deceased) {
+    public CountModel(String district, String confirmed, String active, String recovered, String deceased) {
         this.district = district;
         this.confirmed = confirmed;
         this.active = active;

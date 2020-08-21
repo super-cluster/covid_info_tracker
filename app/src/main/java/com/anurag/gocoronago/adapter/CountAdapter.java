@@ -1,4 +1,4 @@
-package com.anurag.gocoronago;
+package com.anurag.gocoronago.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,13 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.anurag.gocoronago.R;
+import com.anurag.gocoronago.model.CountModel;
+
 import java.util.List;
 
 public class CountAdapter extends RecyclerView.Adapter<CountAdapter.MyHolder> {
     private Context context;
-    private List<CountMode> countModeList;
+    private List<CountModel> countModeList;
 
-    public CountAdapter(Context context, List<CountMode> countModeList) {
+    public CountAdapter(Context context, List<CountModel> countModeList) {
         this.context = context;
         this.countModeList = countModeList;
     }

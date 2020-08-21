@@ -1,4 +1,4 @@
-package com.anurag.gocoronago;
+package com.anurag.gocoronago.model;
 
 public class ModelMap {
    double lon,lat;

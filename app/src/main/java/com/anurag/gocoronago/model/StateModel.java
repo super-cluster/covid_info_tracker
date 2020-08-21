@@ -1,4 +1,4 @@
-package com.anurag.gocoronago;
+package com.anurag.gocoronago.model;
 
 public class StateModel {
     String state,statecode,district,confirmed,active,recovered,deceased;
